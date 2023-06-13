@@ -65,7 +65,7 @@ int main() {
 			cout << da[0].name << endl;
 			cout << da[1].name << endl;
 
-			for (int i = 0; i < 100 && da[i].name != "0000\n"; i++)
+			for (int i = 0; i < 100 && da[i].name != "0000\n"; i++){
 				da[i] = da[i + 1];
 				cout << da[1].name << endl;
 			}
