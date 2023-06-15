@@ -22,15 +22,15 @@ int pop() { //퇴장
 
 	// 입력한 이름이 첫번째 대기열이 아닐 때 pop 불가. - 조건문 검사 필요
 	int data1 = da[top].id;
-	cout << "Pop : " << data1 << endl;\
-	return 0;
+	cout << "Pop : " << data1 << endl; \
+		return 0;
 }
 
 void print() { // 대기열 출력
 	cout << "대기열 : ";
 	for (int i = 0; i < 100 && da[i].name != "0000\n"; i++)
 	{
-		cout << da[i].name << endl;
+		cout << da[i].name << " ";
 	}
 	cout << endl << endl;
 }
@@ -62,13 +62,16 @@ int main() {
 			// 큐 자료형 테스트를 위해 임시 코드변경.
 			// 구조체의 인덱스를 하나씩 감소시킬 수 있는지
 
-			cout << da[0].name << endl;
-			cout << da[1].name << endl;
+			/*cout << "0번째" << da[0].name << endl;
+			cout << "1번째" << da[1].name << endl;*/
 
-			for (int i = 0; i < 100 && da[i].name != "0000\n"; i++){
+			for (int i = 0; i < 100 && da[i].name != "0000\n"; i++) {
 				da[i] = da[i + 1];
-				cout << da[1].name << endl;
+				cout << i << "번째" << da[i].name << endl;
+				/*cout << da[1].name << endl;*/
 			}
+			/*cout << "0번째" << da[0].name << endl;
+			cout << "1번째" << da[1].name << endl;*/
 		}
 	}
 }
